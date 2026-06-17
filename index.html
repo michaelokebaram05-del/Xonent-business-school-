@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xonent Business School</title>
+
+<style>
+:root{
+  --blue:#1e3a8a;
+  --light:#f8fafc;
+  --dark:#0f172a;
+}
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:var(--light);
+color:var(--dark);
+}
+
+/* NAV */
+header{
+background:var(--blue);
+color:white;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:15px;
+font-weight:bold;
+font-size:14px;
+}
+
+/* HERO */
+.hero{
+background:linear-gradient(135deg, #1e3a8a, #2563eb);
+color:white;
+text-align:center;
+padding:100px 20px;
+}
+
+.hero h1{
+font-size:42px;
+margin-bottom:10px;
+animation:fadeUp 1s ease;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+opacity:0.9;
+font-size:18px;
+animation:fadeUp 1.2s ease;
+}
+
+.cta{
+display:inline-block;
+margin-top:20px;
+padding:14px 22px;
+background:white;
+color:var(--blue);
+font-weight:bold;
+border-radius:8px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.cta:hover{
+transform:scale(1.05);
+}
+
+/* SECTIONS */
+.section{
+padding:70px 20px;
+max-width:1100px;
+margin:auto;
+text-align:center;
+}
+
+h2{
+font-size:28px;
+margin-bottom:20px;
+}
+
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:22px;
+border-radius:14px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+border:1px solid #e2e8f0;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.price{
+color:var(--blue);
+font-weight:bold;
+margin-top:10px;
+}
+
+/* FOUNDER */
+.founder img{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid var(--blue);
+margin-bottom:10px;
+}
+
+/* FLOAT WHATSAPP */
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+animation:bounce 2s infinite;
+}
+
+/* FOOTER */
+footer{
+background:var(--blue);
+color:white;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div><b>XONENT</b></div>
+<nav>
+<a href="#courses">Courses</a>
+<a href="#about">About</a>
+<a href="#apply">Apply</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Learn How To Sell & Build Online Income Skills</h1>
+<p>Practical WhatsApp-based training in digital marketing, business, and real-world earning skills for beginners.</p>
+
+<a class="cta" href="#apply">Start Learning Today</a>
+</section>
+
+<!-- TRUST / VALUE -->
+<section class="section">
+<h2>Why Students Choose Xonent</h2>
+
+<div class="cards">
+<div class="card">✔ Beginner-friendly training</div>
+<div class="card">✔ Practical WhatsApp classes</div>
+<div class="card">✔ Step-by-step guidance</div>
+<div class="card">✔ Real digital business skills</div>
+</div>
+</section>
+
+<!-- COURSES -->
+<section class="section" id="courses">
+<h2>Our Programs</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Digital Marketing</h3>
+<p>Full 2-month practical training</p>
+<div class="price">₦20,000</div>
+</div>
+
+<div class="card">
+<h3>Mentorship</h3>
+<p>Personal business guidance</p>
+<div class="price">₦30,000</div>
+</div>
+
+<div class="card">
+<h3>One-on-One Coaching</h3>
+<p>Private business session</p>
+<div class="price">₦15,000</div>
+</div>
+
+</div>
+</section>
+
+<!-- FOUNDER -->
+<section class="section" id="about">
+<h2>Meet The Founder</h2>
+
+<div class="founder">
+<img src="https://i.postimg.cc/rpfM50m8/Screenshot-20260411-222830-1.jpg" alt="Founder">
+<h3>Okebaram Michael Chikanyima</h3>
+<p>Founder of Xonent Business School</p>
+<p>I help beginners learn how to sell, build income skills, and start online businesses from scratch.</p>
+</div>
+</section>
+
+<!-- APPLY -->
+<section class="section" id="apply">
+<h2>Start Your Training</h2>
+
+<div class="card">
+<p>Click below to enroll instantly via WhatsApp</p>
+
+<a class="cta"
+href="https://wa.me/2348035068574?text=Hello%20Xonent%20Business%20School%2C%20I%20want%20to%20enroll">
+Apply Now
+</a>
+</div>
+</section>
+
+<footer>
+© 2026 Xonent Business School | Learn • Sell • Earn
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="whatsapp-float"
+href="https://wa.me/2348035068574?text=Hello%20Xonent%20Business%20School%2C%20I%20want%20to%20enroll">
+💬
+</a>
+
+</body>
+</html>
