@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xonent Enrollment</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+color:white;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:30px 20px;
+}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+animation:fade 1s ease;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.badge{
+display:inline-block;
+background:#f59e0b;
+color:black;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+margin-bottom:10px;
+font-weight:bold;
+}
+
+.card{
+background:white;
+color:#0f172a;
+padding:20px;
+margin:20px 0;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+animation:up 1s ease forwards;
+opacity:0;
+transform:translateY(20px);
+}
+
+.card:nth-child(2){animation-delay:0.2s;}
+.card:nth-child(3){animation-delay:0.4s;}
+.card:nth-child(4){animation-delay:0.6s;}
+
+ul{
+line-height:1.8;
+}
+
+.cta{
+display:block;
+text-align:center;
+background:#22c55e;
+color:white;
+padding:15px;
+margin:30px auto;
+max-width:400px;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+animation:pulse 1.5s infinite;
+}
+
+.cta:hover{
+transform:scale(1.05);
+}
+
+.back{
+text-align:center;
+display:block;
+margin-top:20px;
+color:#93c5fd;
+text-decoration:none;
+}
+
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
+}
+
+@keyframes up{
+to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.05)}
+100%{transform:scale(1)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+<div class="badge">🔥 LIMITED SPOTS AVAILABLE</div>
+<h1 id="title">Loading Course...</h1>
+<p>Don’t scroll away… this might be your chance to start earning online skills.</p>
+</div>
+
+<div class="card">
+<h2>⚡ What You Are Enrolling Into</h2>
+<p id="desc"></p>
+</div>
+
+<div class="card">
+<h2>📚 What You Will Learn</h2>
+<ul id="learn"></ul>
+</div>
+
+<div class="card">
+<h2>💎 Benefits</h2>
+<ul>
+<li>Learn real digital income skills</li>
+<li>Beginner friendly training</li>
+<li>WhatsApp support classes</li>
+<li>Step-by-step guidance</li>
+</ul>
+</div>
+
+<a class="cta" id="ctaBtn">👉 YES I WANT TO JOIN</a>
+
+<a class="back" href="index.html">← Back to Home</a>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const course = params.get("course");
+
+let title = document.getElementById("title");
+let desc = document.getElementById("desc");
+let learn = document.getElementById("learn");
+let ctaBtn = document.getElementById("ctaBtn");
+
+let msg = "";
+
+if(course === "marketing"){
+title.innerText = "Digital Marketing Mastery (2 Months)";
+desc.innerText = "Learn how to sell online, run ads, and build income skills from scratch.";
+
+learn.innerHTML = `
+<li>How to sell products online</li>
+<li>WhatsApp marketing strategies</li>
+<li>How to get daily customers</li>
+<li>Content that attracts buyers</li>
+`;
+
+msg = "I want to enroll in Digital Marketing Course";
+}
+
+else if(course === "mentorship"){
+title.innerText = "Mentorship Program";
+desc.innerText = "Get personal guidance to grow your business skills.";
+
+learn.innerHTML = `
+<li>Business coaching</li>
+<li>Income building strategy</li>
+<li>Step-by-step growth system</li>
+`;
+
+msg = "I want Mentorship Program";
+}
+
+else{
+title.innerText = "Course Enrollment";
+desc.innerText = "Select a valid course from the homepage.";
+}
+
+ctaBtn.href = "https://wa.me/2348035068574?text=" + encodeURIComponent(msg);
+</script>
+
+</body>
+  </html>
